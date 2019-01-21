@@ -1,0 +1,26 @@
+group 'com.azure'
+version '1.0-SNAPSHOT'
+
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'spring-boot'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()//依赖Maven库
+
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.1.RELEASE")
+    }
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.boot:spring-boot-starter-test')
+}
